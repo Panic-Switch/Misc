@@ -117,4 +117,4 @@ char shellcode[] =
         return 0;
     }
 
-    /* compile with: gcc kpanic.c -fno-stack-protector -o kpanic */
+    /* compile with: gcc kpanic-test.c -fno-stack-protector -o kpanic */

